@@ -55,14 +55,14 @@ set title               " set the window’s title, reflecting the file currentl
 
 
 " Specify a directory for plugins
-call plug#begin('~/.vim/plugged')
+"call plug#begin('~/.vim/plugged')
 
 " A colorful, dark color scheme for Vim
 " https://github.com/nanotech/jellybeans.vim
-Plug 'nanotech/jellybeans.vim'
+"Plug 'nanotech/jellybeans.vim'
 
 " Initialize plugin system
-call plug#end()
+"call plug#end()
 
 
 colorscheme jellybeans  " activate scheme
