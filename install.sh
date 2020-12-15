@@ -11,15 +11,18 @@ sudo apt -y update
 # install git
 sudo apt -y install git
 
-# install curl
-sudo apt -y install curl
-
+# install curl sudo apt -y install curl 
 # set RTC to local due to windows compatibility
 #timedatectl set-local-rtc 1
 
 # ----- vim ----- 
 # install vim
 sudo apt -y install vim
+# set vim as default editor
+# echo "export VISUAL=vim" >> ~/.bashrc
+# echo "export EDITOR="$VISUAL"" >> ~/.bashrc
+# set vim as default editor for visudo
+# sudo echo "Defaults        editor=/usr/bin/vim" >> /etc/sudoers
 
 # install plugin manager for vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -32,6 +35,14 @@ curl -fLo ~/.vim/colors/jellybeans.vim --create-dirs \
 
 ln -s $INST_PATH/dotvimrc ~/.vimrc
 
+# ----- pip -----
+sudo apt -y install python-pip
+
+# ----- terminator -----
+sudo apt -y install terminator
+
+# ----- tmux -----
+sudo apt -y install tmux
 
 # ----- ROS ----- 
 read -p "Install ROS? [y/n]: " -r
